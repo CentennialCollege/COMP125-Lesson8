@@ -1,4 +1,4 @@
-# COMP125-Lesson7
+# COMP125-Lesson8
 
-## This is a review lesson for the mid-term test
+## Objecet Oriented JavaScript
 
