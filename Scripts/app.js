@@ -61,7 +61,7 @@
     } ());
 
 
-
+    // app entry function
     function init() {
         var person = new Person("Tom", 45);
 
