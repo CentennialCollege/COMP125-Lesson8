@@ -15,6 +15,7 @@
 
     var name = "John";
 
+/*
     var User = {
         ID: "1",
         Name: "admin",
@@ -43,6 +44,28 @@
         }
     };
 
+    */
+
+    // User Class +++++++++++++++++++++++++++++++
+    var User = (function(){
+        // Constructor Method ++++++++++++++++++++
+        var User = function(ID, username, password, email) {
+            this.ID = ID;
+            this.username = username;
+            this.password = password;
+            this.email = email;
+        }
+
+        User.prototype.LogToConsole = function() {
+            console.log("User ID: " + this.ID);
+            console.log("username: " + this.username);
+            console.log("password: " + this.password);
+            console.log("Email: " + this.email);
+        };
+
+        return User;
+    })();
+
 
     // Person Class +++++++++++++++++++++++++++++++
     var Person = (function () {
@@ -66,12 +89,19 @@
         var person = new Person("Tom", 45);
 
         person.SaysHello();
+
+        var users = [
+            new User(1,"thomas","123456","tom@example.com"), 
+            new User(2,"john","123456","john@example.com"),
+            new User(3,"rutvik","123456","rutvik@example.com"),
+            new Person("Tom",47)
+            ];
+        
+        console.log(users);
+        users[2].LogToConsole();
+
+
     }
-
-
-
-
-
 
     // call init funciton when window finishes loading
     window.addEventListener("load", init);
